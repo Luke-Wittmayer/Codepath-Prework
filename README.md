@@ -39,7 +39,9 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
+Winning
 ![Success](https://user-images.githubusercontent.com/92394723/160332714-6a1edd5c-796c-4618-a591-17b4f46be0e7.gif)
+Losing
 ![Failure](https://user-images.githubusercontent.com/92394723/160332745-8300a349-a1c4-4faf-a875-05367881a7af.gif)
 
 ## Reflection Questions
