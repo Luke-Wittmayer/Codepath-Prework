@@ -1,20 +1,28 @@
 // global constants
-const clueHoldTime = 1000; //how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-var pattern = [2, 2, 4, 3, 2, 1, 2, 4];
+var pattern = [];
 var progress = 0; 
 var gamePlaying = false;
 var tonePlaying = false;
 var volume = 0.5;  //must be between 0.0 and 1.0
 var guessCounter = 0;
+var failures = 0;
+var clueHoldTime = 1000; //how long to hold each clue's light/sound
+
+function getRandomInt(max) {
+  return Math.floor((Math.random() * max) + 1);
+}
 
 function startGame(){
     //initialize game variables
+    pattern = [getRandomInt(5), getRandomInt(5), getRandomInt(5), getRandomInt(5), getRandomInt(5), getRandomInt(5), getRandomInt(5), getRandomInt(5)];
     progress = 0;
+    failures = 0
     gamePlaying = true;
+    clueHoldTime= 1000;
     document.getElementById("startBtn").classList.add("hidden");
     document.getElementById("stopBtn").classList.remove("hidden");
     playClueSequence();
@@ -28,10 +36,12 @@ function stopGame(){
 
 // Sound Synthesis Functions
 const freqMap = {
-  1: 261.6,
-  2: 329.6,
-  3: 392,
-  4: 466.2
+  1: 281.6,
+  2: 309.6,
+  3: 412,
+  4: 446.2,
+  5: 466.2,
+  6: 486.2
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
@@ -115,13 +125,19 @@ function guess(btn){
         winGame();
       }else{
         progress++;
+        clueHoldTime = clueHoldTime - 100;
         playClueSequence();
       }
     }else{
       guessCounter++;
     }
   }else{
-    loseGame();
+    failures++;
+    if(failures != 3){
+      playClueSequence();
+    }else{
+      loseGame();
+    }
   }
   
 }
