@@ -51,10 +51,15 @@ Losing
 To understand how to generate random numbers: https://www.w3schools.com/js/js_random.asp
 
 2. What was a challenge you encountered in creating this submission (be specific)? How did you overcome it? (recommended 200 - 400 words) 
-[YOUR ANSWER HERE]
+
+The two largest challenges I ran into were actually rather small and had easy solutions but I simply overlooked them while looking for what I thought would be more complicated errors. The first was trying to add tones to the 5th and 6th buttons. For some reason I kept getting a parser error when I entered in their tone frequency and I couldn’t understand why despite checking everything. It required me to look more closely at my code to notice a simple syntax error. I had forgotten to place the commas on the new entries. 
+
+The second challenge I ran into was how to speed up the play back every turn. This was solved by considering all the pieces that went into determining the length of the playback. I figured out that the constant clueHoldTime. I needed to shorten this, which would decrease the time the clue spent on each color, and thus speed up the playback. By changing this constant to a variable and that is reset on start up and decreased every turn I was able to accomplish the goal. This was not a challenge of overcoming and unknown error but simply considering for a time on how I could implement it in the first place.
+
 
 3. What questions about web development do you have after completing your submission? (recommended 100 - 300 words) 
-[YOUR ANSWER HERE]
+
+It’s difficult to think of questions based on what I know for now. After working on the prework and completing its objective, I would like to know how it all functions on more complex applications. Regarding the ‘frontend’ and ‘backend’ of any web application, how does a website store data and then access that data upon user interaction? How can websites access separate apps within themselves like playing videos or games? It seems to me these questions would involve some very complex code but these are the things at the forefront of my mind. 
 
 4. If you had a few more hours to work on this project, what would you spend them doing (for example: refactoring certain functions, adding additional features, etc). Be specific. (recommended 100 - 300 words) 
 
