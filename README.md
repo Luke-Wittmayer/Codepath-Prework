@@ -39,8 +39,10 @@ The following **additional** features are implemented:
 ## Video Walkthrough (GIF)
 
 If you recorded multiple GIFs for all the implemented features, you can add them here:
-![]![Success](https://user-images.githubusercontent.com/92394723/160332714-6a1edd5c-796c-4618-a591-17b4f46be0e7.gif)
-![]![Failure](https://user-images.githubusercontent.com/92394723/160332745-8300a349-a1c4-4faf-a875-05367881a7af.gif)
+![X]!
+[Success](https://user-images.githubusercontent.com/92394723/160332714-6a1edd5c-796c-4618-a591-17b4f46be0e7.gif)
+![X]!
+[Failure](https://user-images.githubusercontent.com/92394723/160332745-8300a349-a1c4-4faf-a875-05367881a7af.gif)
 
 ## Reflection Questions
 1. If you used any outside resources to help complete your submission (websites, books, people, etc) list them here. 
